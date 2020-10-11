@@ -1,0 +1,14 @@
+// import partial sass file which has a naming convention starting underscore. and import without extension
+// main.scss
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
+//you can chage themes by uncommenting the line below
+//@import "themes/theme.grey";
+@import "base/base";
+@import "base/typography";
+
+@import "layout/header";
+@import "layout/widget";
+
+@import "pages/home";

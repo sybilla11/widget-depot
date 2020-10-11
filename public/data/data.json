@@ -1,0 +1,60 @@
+{
+  "widgets": [
+    {
+      "id": 1,
+      "title": "Widget 1",
+      "specifications": {
+        "dimensions": { "length": 10, "width": 20, "height": 30 },
+        "weight": { "qty": "4lbs"},
+        "capacity": {
+          "qty": "10L"
+        }
+      },
+      "description": "Lorem ipsum dolor sit amet, per an propriae accusata quaerendum. Sed purto voluptatibus id, ei eos laoreet scaevola probatus. Te pro idque consulatu, aliquip blandit maiestatis ex duo, ne disputando reformidans nam. At causae laboramus liberavisse sit. Eum agam cotidieque et, eum nostrum atomorum praesent an, eum ea tale aliquid definiebas.",
+      "imageURL": "img/widget1.webp",
+      "price": 750
+    },
+    {
+      "id": 2,
+      "title": "Widget 2",
+      "specifications": {
+        "dimensions": { "length": 20, "width": 30, "height": 5 },
+        "weight": { "qty": "8lbs"},
+        "capacity": {
+          "qty": "20L"
+        }
+      },
+      "description": "Lorem ipsum dolor sit amet, per an propriae accusata quaerendum. Sed purto voluptatibus id, ei eos laoreet scaevola probatus. Te pro idque consulatu, aliquip blandit maiestatis ex duo, ne disputando reformidans nam. At causae laboramus liberavisse sit. Eum agam cotidieque et, eum nostrum atomorum praesent an, eum ea tale aliquid definiebas.",
+      "imageURL": "img/widget2.webp",
+      "price": 240
+    },
+    {
+      "id": 3,
+      "title": "Widget 3",
+      "specifications": {
+        "dimensions": { "length": 40, "width": 50, "height": 2 },
+        "weight": { "qty": "10lbs"},
+        "capacity": {
+          "qty": "30L"
+        }
+      },
+      "description": "Lorem ipsum dolor sit amet, per an propriae accusata quaerendum. Sed purto voluptatibus id, ei eos laoreet scaevola probatus. Te pro idque consulatu, aliquip blandit maiestatis ex duo, ne disputando reformidans nam. At causae laboramus liberavisse sit. Eum agam cotidieque et, eum nostrum atomorum praesent an, eum ea tale aliquid definiebas.",
+      "imageURL": "img/widget3.webp",
+      "price": 500
+    },
+    {
+      "id": 4,
+      "title": "Widget 4",
+      "specifications": {
+        "dimensions": { "length": 8, "width": 8, "height": 8 },
+        "weight": { "qty": "12lbs"},
+        "capacity": {
+          "qty": "40L"
+        }
+      },
+      "description": "Lorem ipsum dolor sit amet, per an propriae accusata quaerendum. Sed purto voluptatibus id, ei eos laoreet scaevola probatus. Te pro idque consulatu, aliquip blandit maiestatis ex duo, ne disputando reformidans nam. At causae laboramus liberavisse sit. Eum agam cotidieque et, eum nostrum atomorum praesent an, eum ea tale aliquid definiebas.",
+      "imageURL": "img/widget4.webp",
+      "price": 900
+    }
+  ]
+}

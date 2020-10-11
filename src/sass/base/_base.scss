@@ -1,0 +1,11 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*best practice to inherit border box */
+}
+html {
+  /* font-size: 10px; bad idea to mention the font-size in px as the user will not see any chages in the overall font-size if he wants to change.   */
+  font-size: 62.5%; /* to get the equivalent 10px with default font size 16px  (10/16)*/
+}

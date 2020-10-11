@@ -1,0 +1,121 @@
+.widgetSection {
+  @include borderbox;
+  width: 90vw;
+  @media screen and (max-width: $break-small) {
+    //width: 82vw;
+  }
+  @media screen and (max-width: $break-medium) {
+    //width: vw;
+  }
+}
+.widgetPrimary {
+  //border-bottom: 1px solid;
+  height: 50vh;
+  @media screen and (max-width: $break-medium) {
+    height: 40vh;
+  }
+  &_top {
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    margin: 2rem;
+    .titlePrimary {
+      width: 84%;
+      padding-bottom: 2rem;
+    }
+    .cart {
+      margin-right: 1%;
+      margin-top: -24%;
+    }
+    .badge {
+      font-size: 1.5rem;
+      width: 100%;
+      margin-left: 25%;
+    }
+  }
+  &_image {
+    height: 70%;
+    @include displayCenter;
+    width: 80%;
+    display: block;
+    object-fit: contain;
+  }
+}
+.widgetDesc {
+  @include displayCenter;
+  width: 90%;
+  height: Auto;
+  border-top: 2px solid;
+  text-align: left;
+  padding: 2rem;
+}
+.widgetSpec {
+  border-top: 2px solid;
+  width: 90%;
+  @include displayCenter;
+  display: block;
+  &_titlePrimary {
+    padding-left: 2rem;
+    width: 100%;
+  }
+  &_flexbox {
+    width: 100%;
+    padding-left: 4rem;
+    display: inline-flex;
+    @media screen and (max-width: $break-small) {
+      padding-left: 0;
+      display: block;
+    }
+    @media screen and (max-width: $break-medium) {
+      padding-left: 0;
+    }
+  }
+  &_flexItem {
+    width: 30%;
+    padding: 3rem 3rem;
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+      padding: 0;
+    }
+    @media screen and (max-width: $break-medium) {
+      width: 40%;
+      padding: 2rem;
+      white-space: nowrap;
+    }
+  }
+}
+.widgetThumbnail {
+  height: 20%;
+  @include borderbox;
+  display: flex;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: $break-medium) {
+  }
+
+  &_arrow {
+    margin-left: 50%;
+    margin-top: 20%;
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
+  }
+}
+.cartContent {
+  right: 2rem;
+  position: absolute;
+  width: 15%;
+  height: 10rem;
+  text-align: center;
+  @include borderbox;
+
+  &_btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 8rem;
+    margin-right: 1rem;
+    background-color: $color-primary;
+  }
+}

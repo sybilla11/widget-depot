@@ -1,0 +1,10 @@
+.noContent {
+  width: 100vw;
+  background-color: $color-secondary;
+  @include fontPrimary;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  //margin: 2rem;
+}

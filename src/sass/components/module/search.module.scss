@@ -1,0 +1,30 @@
+@import "../../main.module.scss";
+
+.searchBar {
+  //padding: 2rem;
+  //margin: 2rem;
+  position: relative;
+  //border: 2px solid $color-secondary;
+  @include borderbox;
+  height: 5rem;
+
+  &_searchInput {
+    padding: 1rem;
+    border: none;
+    font-size: 2rem;
+    color: $color-secondary;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    width: 80%;
+    height: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  &_searchIcon {
+    float: right;
+    margin-right: 1rem;
+    margin-top: 1%;
+  }
+}

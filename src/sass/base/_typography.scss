@@ -1,0 +1,54 @@
+.appTitle {
+  color: $color-white;
+  font-size: 3rem;
+  @include fontPrimary;
+}
+.headingPrimary {
+  color: $color-black;
+  @include fontPrimary;
+  margin-bottom: 1rem;
+
+  &--main {
+    display: block;
+    font-size: 3rem;
+    font-family: $font-primary;
+  }
+}
+.specsTitle {
+  color: $color-black;
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: $font-primary;
+
+  &--sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  &--subData {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+.descriptionText {
+  color: $color-black;
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: $font-primary;
+}
+
+body {
+  font-family: $font-primary;
+  /* font-size: 16px; replaced this by setting font size on root element */
+  line-height: 1.7;
+  color: #777;
+  padding: 0;
+  box-sizing: border-box;
+}

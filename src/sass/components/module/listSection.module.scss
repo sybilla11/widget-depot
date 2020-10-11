@@ -1,0 +1,11 @@
+@import "../../main.module.scss";
+
+.widgetItemList {
+  width: 20%;
+  @media screen and (max-width: $break-medium) {
+    width: 95%;
+    height: auto;
+    display: flex;
+    overflow: auto;
+  }
+}

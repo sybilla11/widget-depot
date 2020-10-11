@@ -1,0 +1,18 @@
+@import "../../main.module.scss";
+
+.Main {
+  width: 90vw;
+  margin: 3rem 7rem 3rem;
+  @include displayCenter;
+}
+
+.widgetFlexBox {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  @media screen and (max-width: $break-medium) {
+    display: block;
+    width: 90vw;
+  }
+}
