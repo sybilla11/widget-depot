@@ -1,15 +1,8 @@
 .widgetSection {
   @include borderbox;
   width: 90vw;
-  @media screen and (max-width: $break-small) {
-    //width: 82vw;
-  }
-  @media screen and (max-width: $break-medium) {
-    //width: vw;
-  }
-}
+ }
 .widgetPrimary {
-  //border-bottom: 1px solid;
   height: 50vh;
   @media screen and (max-width: $break-medium) {
     height: 40vh;
