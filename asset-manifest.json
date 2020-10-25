@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/widget-depot/static/css/main.5b4b2210.chunk.css",
+    "main.js": "/widget-depot/static/js/main.4a01669a.chunk.js",
+    "main.js.map": "/widget-depot/static/js/main.4a01669a.chunk.js.map",
+    "runtime-main.js": "/widget-depot/static/js/runtime-main.edd3ca3e.js",
+    "runtime-main.js.map": "/widget-depot/static/js/runtime-main.edd3ca3e.js.map",
+    "static/js/2.d7068441.chunk.js": "/widget-depot/static/js/2.d7068441.chunk.js",
+    "static/js/2.d7068441.chunk.js.map": "/widget-depot/static/js/2.d7068441.chunk.js.map",
+    "index.html": "/widget-depot/index.html",
+    "precache-manifest.5973fdefb519bc2c8388c79327cf1ed3.js": "/widget-depot/precache-manifest.5973fdefb519bc2c8388c79327cf1ed3.js",
+    "service-worker.js": "/widget-depot/service-worker.js",
+    "static/css/main.5b4b2210.chunk.css.map": "/widget-depot/static/css/main.5b4b2210.chunk.css.map",
+    "static/js/2.d7068441.chunk.js.LICENSE.txt": "/widget-depot/static/js/2.d7068441.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.edd3ca3e.js",
+    "static/js/2.d7068441.chunk.js",
+    "static/css/main.5b4b2210.chunk.css",
+    "static/js/main.4a01669a.chunk.js"
+  ]
+}
