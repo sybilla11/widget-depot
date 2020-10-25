@@ -9,7 +9,7 @@ const SearchBar = (props) => {
       <input
         className={style.searchBar_searchInput}
         type="text"
-        placeholder="Find the widget of your dreams"
+        placeholder={props.placeholderValue}
         onChange={(e)=>props.onInputChange(e)}
       ></input>
       <Search size = {25} className={style.searchBar_searchIcon} ></Search>

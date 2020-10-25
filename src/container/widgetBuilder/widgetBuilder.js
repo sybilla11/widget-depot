@@ -12,7 +12,8 @@ class WidgetBuilder extends Component {
     onLoadWidgets:false,
     filterWidget:null,
     widgets: [],
-    filterList:[],
+    searchWidget:'',
+    //filterList:[],
     error: null,
     totalPrice:0,
     totalItems:0
@@ -45,23 +46,7 @@ class WidgetBuilder extends Component {
   };
 
   handleOnInputChange = (event) => {
-    
-    const query = event.target.value;
-    let newWidgetList = [];
-    if(query!=="")
-    {
-      newWidgetList = this.state.widgets.filter((item) => {
-      console.log(item);
-      let lcKey = item.title.toLowerCase();
-      let filter = query.toLowerCase();
-      return lcKey.includes(filter);
-    });
-  
-  }else{
-        newWidgetList = this.state.widgets;
-    }
-      this.setState({ filterList : newWidgetList,onLoadWidgets:false, filterWidget : newWidgetList[0]} );
-    
+  this.setState({searchWidget: event.target.value});
   };
 
   purchaseHandler = (price) => {
@@ -71,11 +56,14 @@ class WidgetBuilder extends Component {
     this.setState({ totalPrice:newPrice, totalItems : newTotalItems});
   };
   render() {
+
+    const {widgets, searchWidget} = this.state;
+    const filteredWidget = widgets.filter(widget => widget.title.toLowerCase().includes(searchWidget.toLowerCase()))
     
     let widgetData = [];
-    if (this.state.widget != null || this.state.filterList.length !== 0) {
+    if (this.state.widget != null || filteredWidget.length !== 0) {
       widgetData =
-      (<Main widgetList={this.state.onLoadWidgets ? this.state.widgets:this.state.filterList}
+      (<Main widgetList={filteredWidget}
               widget = {this.state.onLoadWidgets ? this.state.widget : this.state.filterWidget}
               purchaseHandler = {this.purchaseHandler}
               widgetClicked = {this.onWidgetClickHandler}

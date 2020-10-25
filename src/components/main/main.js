@@ -18,7 +18,7 @@ const Main = (props) => {
   };
   return (
     <div className={style.Main}>
-      <SearchBar onInputChange = {props.searchTitle}></SearchBar>
+      <SearchBar placeholderValue = "Find the widget of your dreams" onInputChange = {props.searchTitle}></SearchBar>
       <div className={style.widgetFlexBox}>
         <ListSection widgetList = {props.widgetList} currentWidget = {props.widgetClicked}
         ></ListSection>

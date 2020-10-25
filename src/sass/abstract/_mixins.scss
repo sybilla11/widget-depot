@@ -10,8 +10,9 @@
   margin-right: auto;
 }
 @mixin borderbox {
-  border: 1px solid;
-  box-shadow: 0.1rem 0.2rem;
+  //border: 1px solid;
+  //box-shadow: 0.1rem 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 1rem;
   border-color: $color-secondary;
 }
