@@ -1,41 +1,58 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
 .widgetSection {
-  @include borderbox;
+  @include mixins.borderbox;
   width: 90vw;
  }
 .widgetPrimary {
   height: 50vh;
-  @media screen and (max-width: $break-medium) {
+  @media screen and (max-width: variables.$break-medium) {
     height: 40vh;
   }
   &_top {
     display: flex;
+    align-items: center;
     width: 100%;
-    height: 2rem;
+    min-height: 2rem;
     margin: 2rem;
     .titlePrimary {
       width: 84%;
       padding-bottom: 2rem;
     }
+    .cartControls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
     .cart {
-      margin-right: 1%;
-      margin-top: -24%;
+      cursor: pointer;
+    }
+    .cartCountButton {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font: inherit;
+      line-height: 1;
     }
     .badge {
       font-size: 1.5rem;
-      width: 100%;
-      margin-left: 25%;
+      display: inline-block;
+      min-width: 1.5em;
+      text-align: center;
     }
   }
   &_image {
     height: 70%;
-    @include displayCenter;
+    @include mixins.displayCenter;
     width: 80%;
     display: block;
     object-fit: contain;
   }
 }
 .widgetDesc {
-  @include displayCenter;
+  @include mixins.displayCenter;
   width: 90%;
   height: Auto;
   border-top: 2px solid;
@@ -45,7 +62,7 @@
 .widgetSpec {
   border-top: 2px solid;
   width: 90%;
-  @include displayCenter;
+  @include mixins.displayCenter;
   display: block;
   &_titlePrimary {
     padding-left: 2rem;
@@ -55,22 +72,22 @@
     width: 100%;
     padding-left: 4rem;
     display: inline-flex;
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: variables.$break-small) {
       padding-left: 0;
       display: block;
     }
-    @media screen and (max-width: $break-medium) {
+    @media screen and (max-width: variables.$break-medium) {
       padding-left: 0;
     }
   }
   &_flexItem {
     width: 30%;
     padding: 3rem 3rem;
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: variables.$break-small) {
       width: 100%;
       padding: 0;
     }
-    @media screen and (max-width: $break-medium) {
+    @media screen and (max-width: variables.$break-medium) {
       width: 40%;
       padding: 2rem;
       white-space: nowrap;
@@ -79,36 +96,118 @@
 }
 .widgetThumbnail {
   height: 20%;
-  @include borderbox;
+  @include mixins.borderbox;
   display: flex;
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 
-  @media screen and (max-width: $break-medium) {
+  @media screen and (max-width: variables.$break-medium) {
   }
 
   &_arrow {
     margin-left: 50%;
     margin-top: 20%;
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: variables.$break-small) {
       display: none;
     }
   }
-}
-.cartContent {
-  right: 2rem;
-  position: absolute;
-  width: 15%;
-  height: 10rem;
-  text-align: center;
-  @include borderbox;
 
-  &_btn {
-    position: relative;
-    display: inline-block;
-    margin-top: 8rem;
-    margin-right: 1rem;
-    background-color: $color-primary;
+  &--selected {
+    box-shadow: 0 0 0 2px variables.$color-primary;
+  }
+}
+.cartDrawer {
+  position: absolute;
+  right: 2rem;
+  top: 7rem;
+  width: 28rem;
+  max-width: 90vw;
+  background-color: variables.$color-white;
+  z-index: 10;
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  @include mixins.borderbox;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &_close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: variables.$color-secondary;
+  }
+
+  &_empty {
+    color: variables.$color-secondary;
+    padding: 1rem 0;
+  }
+
+  &_list {
+    list-style: none;
+    max-height: 20rem;
+    overflow-y: auto;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  &_itemInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_itemTitle {
+    font-weight: 600;
+  }
+
+  &_itemPrice {
+    color: variables.$color-secondary;
+    font-size: 1.2rem;
+  }
+
+  &_itemControls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    button {
+      background: none;
+      border: 1px solid variables.$color-secondary;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: variables.$color-secondary;
+    }
+  }
+
+  &_total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: right;
   }
 }

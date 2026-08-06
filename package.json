@@ -2,26 +2,23 @@
   "name": "widget-depot",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "homepage": "https://sybilla11.github.io/widget-depot",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.20.0",
+    "axios": "^1.7.9",
+    "prop-types": "^15.8.1",
     "react": "^16.13.1",
+    "react-bootstrap-icons": "^1.0.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-router-dom": "^6.30.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "NODE_OPTIONS=--no-experimental-webstorage vitest run",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "production": [
@@ -36,8 +33,13 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "react-axios": "^2.0.3",
-    "react-bootstrap-icons": "^1.0.0"
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^12.1.5",
+    "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "jsdom": "^24.0.0",
+    "sass": "^1.71.1",
+    "vite": "^5.2.0",
+    "vitest": "^1.4.0"
   }
 }

@@ -1,26 +1,29 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
 .appTitle {
-  color: $color-white;
+  color: variables.$color-white;
   font-size: 3rem;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
 }
 .headingPrimary {
-  color: $color-black;
-  @include fontPrimary;
+  color: variables.$color-black;
+  @include mixins.fontPrimary;
   margin-bottom: 1rem;
 
   &--main {
     display: block;
     font-size: 3rem;
-    font-family: $font-primary;
+    font-family: variables.$font-primary;
   }
 }
 .specsTitle {
-  color: $color-black;
+  color: variables.$color-black;
   margin-bottom: 1rem;
   display: block;
   font-size: 2rem;
   font-weight: 200;
-  font-family: $font-primary;
+  font-family: variables.$font-primary;
 
   &--sub {
     display: block;
@@ -36,16 +39,16 @@
 }
 
 .descriptionText {
-  color: $color-black;
+  color: variables.$color-black;
   margin-bottom: 1rem;
   display: block;
   font-size: 1.5rem;
   font-weight: 200;
-  font-family: $font-primary;
+  font-family: variables.$font-primary;
 }
 
 body {
-  font-family: $font-primary;
+  font-family: variables.$font-primary;
   /* font-size: 16px; replaced this by setting font size on root element */
   line-height: 1.7;
   color: #777;

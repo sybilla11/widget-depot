@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import style from "../../../sass/main.module.scss";
 
 const WidgetDesc = (props) => {
@@ -9,6 +10,10 @@ const WidgetDesc = (props) => {
      </p>
     </div>
   );
+};
+
+WidgetDesc.propTypes = {
+  description: PropTypes.string.isRequired,
 };
 
 export default WidgetDesc;

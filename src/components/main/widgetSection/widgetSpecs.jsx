@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import style from "../../../sass/main.module.scss";
 
 const WidgetSpecs = (props) => {
@@ -25,6 +26,12 @@ const WidgetSpecs = (props) => {
       </div>
     </div>
   );
+};
+
+WidgetSpecs.propTypes = {
+  dimension: PropTypes.string.isRequired,
+  weight: PropTypes.string.isRequired,
+  capacity: PropTypes.string.isRequired,
 };
 
 export default WidgetSpecs;

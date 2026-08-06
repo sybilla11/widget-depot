@@ -1,8 +1,9 @@
-@import "../../main.module.scss";
+@use "../../main.module.scss";
+@use "../../abstract/variables";
 
 .widgetItemList {
   width: 20%;
-  @media screen and (max-width: $break-medium) {
+  @media screen and (max-width: variables.$break-medium) {
     width: 95%;
     height: auto;
     display: flex;

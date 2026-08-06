@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin clearfix {
   &::after {
     content: "";
@@ -14,11 +16,11 @@
   //box-shadow: 0.1rem 0.2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 1rem;
-  border-color: $color-secondary;
+  border-color: variables.$color-secondary;
 }
 
 @mixin fontPrimary {
-  font-family: $font-primary;
+  font-family: variables.$font-primary;
   text-transform: uppercase;
   white-space: nowrap;
 }
