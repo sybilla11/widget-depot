@@ -20,10 +20,5 @@
     padding-top: 2rem;
     width: 90%;
     @include mixins.displayCenter;
-
-    &_userLogo {
-      padding-top: 1rem;
-      color: variables.$color-logo;
-    }
   }
 }

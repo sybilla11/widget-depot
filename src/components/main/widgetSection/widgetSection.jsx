@@ -18,7 +18,8 @@ const WidgetSection = (props) => {
                     cartItems = {props.cartItems}
                     removeFromCart = {props.removeFromCart}
                     incrementCartItem = {props.addToCart}
-                    decrementCartItem = {props.decrementCartItem}>Widget Primary</WidgetPrimary>
+                    decrementCartItem = {props.decrementCartItem}
+                    onCheckout = {props.onCheckout}>Widget Primary</WidgetPrimary>
       <WidgetSpecs dimension = {props.widget.specifications.dimensions.length+"\" X "+
                     props.widget.specifications.dimensions.width+"\" X "+
                     props.widget.specifications.dimensions.height+"\""}
@@ -34,6 +35,7 @@ WidgetSection.propTypes = {
   addToCart: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   decrementCartItem: PropTypes.func.isRequired,
+  onCheckout: PropTypes.func.isRequired,
   cartItems: PropTypes.arrayOf(cartItemShape).isRequired,
   totalItems: PropTypes.number.isRequired,
   totalPrice: PropTypes.number.isRequired,

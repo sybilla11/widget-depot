@@ -210,6 +210,29 @@ test("removes an item from the cart via the remove button", async () => {
   );
 });
 
+test("placing an order clears the cart and shows a confirmation", async () => {
+  renderWidgetBuilder();
+  await screen.findByTestId("widget-detail-title");
+
+  fireEvent.click(screen.getByTestId("add-to-cart-button"));
+  fireEvent.click(screen.getByTestId("add-to-cart-button"));
+  fireEvent.click(screen.getByTestId("cart-toggle"));
+  fireEvent.click(screen.getByTestId("checkout-button"));
+
+  expect(screen.getByTestId("order-confirmation")).toHaveTextContent(
+    /order placed/i
+  );
+  expect(screen.getByTestId("cart-count")).toHaveTextContent("0");
+
+  fireEvent.click(
+    screen.getByRole("button", { name: /Close cart/i })
+  );
+  fireEvent.click(screen.getByTestId("cart-toggle"));
+  expect(screen.getByTestId("cart-drawer")).toHaveTextContent(
+    "Your cart is empty"
+  );
+});
+
 test("persists the cart to localStorage across remounts", async () => {
   const { unmount } = renderWidgetBuilder();
   await screen.findByTestId("widget-detail-title");

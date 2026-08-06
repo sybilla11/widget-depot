@@ -100,6 +100,10 @@ class WidgetBuilder extends Component {
     }));
   };
 
+  clearCart = () => {
+    this.setState({ cart: [] });
+  };
+
   render() {
     const { widgets, searchWidget, widgetsLoaded, error, cart } = this.state;
     const routeId = this.props.params.id != null ? Number(this.props.params.id) : null;
@@ -141,6 +145,7 @@ class WidgetBuilder extends Component {
           addToCart={this.addToCart}
           removeFromCart={this.removeFromCart}
           decrementCartItem={this.decrementCartItem}
+          onCheckout={this.clearCart}
           widgetClicked={this.onWidgetClickHandler}
           searchTitle={this.handleOnInputChange}
           searchTerm={searchWidget}

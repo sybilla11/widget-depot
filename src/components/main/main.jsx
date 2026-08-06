@@ -27,6 +27,7 @@ const Main = (props) => {
           addToCart = {props.addToCart}
           removeFromCart = {props.removeFromCart}
           decrementCartItem = {props.decrementCartItem}
+          onCheckout = {props.onCheckout}
           cartItems = {props.cartItems}
           totalItems = {props.totalItems}
           totalPrice = {props.totalPrice}></WidgetSection>
@@ -58,6 +59,7 @@ Main.propTypes = {
   addToCart: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
   decrementCartItem: PropTypes.func.isRequired,
+  onCheckout: PropTypes.func.isRequired,
   cartItems: PropTypes.arrayOf(cartItemShape).isRequired,
   totalItems: PropTypes.number.isRequired,
   totalPrice: PropTypes.number.isRequired,

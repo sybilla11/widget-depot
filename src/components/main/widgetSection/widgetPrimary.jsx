@@ -39,6 +39,7 @@ const WidgetPrimary = (props) => {
           onRemove={props.removeFromCart}
           onIncrement={props.incrementCartItem}
           onDecrement={props.decrementCartItem}
+          onCheckout={props.onCheckout}
         />
       )}
       <img
@@ -62,6 +63,7 @@ WidgetPrimary.propTypes = {
   removeFromCart: PropTypes.func.isRequired,
   incrementCartItem: PropTypes.func.isRequired,
   decrementCartItem: PropTypes.func.isRequired,
+  onCheckout: PropTypes.func.isRequired,
 };
 
 export default WidgetPrimary;
